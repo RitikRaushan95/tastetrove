@@ -3,7 +3,6 @@ import React from 'react'
 function Search() {
   return (
     <div>
-       <hr className="mx-auto border-solid border-b-1 border-slate-500 w-11/12" />
        <div className='mt-10 flex justify-center'>
        <input type='text' className='border-2 mx-auto w-3/4 border-slate-500 hover:border-orange-500 p-2 rounded-md' placeholder='Search for resturant and food'/>
        </div>

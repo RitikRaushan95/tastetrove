@@ -5,6 +5,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
   return (
+    <>
     <header class="text-gray-600 body-font cursor-pointer ">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
      <img src={logo} alt="" className='w-20 h-15'/>
@@ -20,6 +21,9 @@ function Navbar() {
     </button>
   </div>
 </header>
+<hr className="mx-auto border-solid border-b-1 border-slate-500 w-11/12" />
+</>
+
   )
 }
 
