@@ -5,7 +5,7 @@ import Allimage from '../assets/Imagecollection'
 function Body() {
 
     const dataCollect= async ()=>{
-        const apiStore=await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.5940947&lng=85.1375645&restaurantId=725082&catalog_qa=undefined&isMenuUx4');
+        const apiStore=await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.5940947&lng=85.1375645&restaurantId=254135&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER');
         const json= await apiStore.json();
         console.log(json)
     }
