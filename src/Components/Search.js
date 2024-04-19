@@ -14,6 +14,7 @@ function Search() {
         setSearch(a)
   }
  
+  
   let filteredData = () => {
     const b=restCard.filter((el)=> el.info.name.includes(search))
     setFilter(b)
