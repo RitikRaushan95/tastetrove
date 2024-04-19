@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-function Topratedcard({ restInfo }) {
+function Restaurants({ restInfo }) {
   return (
     <div className="m-5 md:w-1/4 sm:mb-0 mb-6 rounded-xl
     transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-90  duration-300 justify-center cursor-pointer relative">
@@ -26,4 +26,4 @@ function Topratedcard({ restInfo }) {
   );
 }
 
-export default Topratedcard;
+export default Restaurants;
