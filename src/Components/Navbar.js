@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../assets/Tastetrove.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+  // const [login,setLogin]=useState("Login")
+
+  // const change=()=>{
+  //   // login==="Login"?setLogin("Logout"):setLogin("Login");
+  //   console.log(login)
+  // }
   return (
     <>
     <header className="text-gray-600 body-font cursor-pointer ">
@@ -18,11 +24,11 @@ function Navbar() {
       <Link to='/about' className="mr-5 hover:text-gray-900 hover:text-orange-500">About</Link>
       <Link to='/contact' className="mr-5 hover:text-gray-900 hover:text-orange-500">Contact</Link>
     </nav>
-    <button className="inline-flex items-center bg-gray-300 border-0 py-1 px-3 focus:outline-none hover:bg-orange-500 rounded text-base mt-4 md:mt-0 text-black">Login
+    <button className="flex justify-center items-center bg-gray-300 border-0 py-1 px-3  focus:outline-none hover:bg-orange-500 rounded text-base mt-4 md:mt-0 text-black">Login
     </button>
   </div>
 </header>
-<hr className="mx-auto border-solid border-b-1 border-slate-500 w-11/12" />
+<hr className="mx-auto border-solid border-b-1 border-slate-500 w-11/12" /> 
 </>
 
   )

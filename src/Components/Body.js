@@ -8,15 +8,14 @@ function Body() {
 
     const [restCrad, setRestCard]=useState([]);
    
-    let resStore=restCrad.map((el)=>{
-        return <Restaurants key={el.id} restInfo={el.info}/>
+    let resStore=restCrad.map((el,index)=>{
+        return <Restaurants key={index} restInfo={el.info}/>
     })
     
     const dataCollect= async ()=>{
         const apiStore=await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         const json= await apiStore.json();
-        const restaurants= json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
-        console.log(json.data.cards)
+        const restaurants= json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
         setRestCard(restaurants)
     }
 
