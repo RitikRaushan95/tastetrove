@@ -6,8 +6,7 @@ import Allimage from '../assets/Imagecollection'
 function Body() {
 
     const [restCrad, setRestCard]=useState([]);
-    
-    console.log(restCrad[0]?.info.aggregatedDiscountInfoV3)
+   
     let resStore=restCrad.map((el)=>{
         return <Topratedcard key={el.id} restInfo={el.info}/>
     })
@@ -16,6 +15,7 @@ function Body() {
         const apiStore=await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         const json= await apiStore.json();
         const restaurants= json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+        console.log(json.data.cards)
         setRestCard(restaurants)
     }
 
