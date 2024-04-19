@@ -1,17 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Topratedcard from './Topratedcard';
 import Allimage from '../assets/Imagecollection'
 
 function Body() {
 
+    const [restCrad, setRestCard]=useState([]);
+    console.log(restCrad)
     const dataCollect= async ()=>{
         const apiStore=await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         const json= await apiStore.json();
-        console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants[1].info.avgRating
-
-
-
-        )
+        const restaurants= json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+        setRestCard(restaurants)
     }
 
 useEffect(() => {
