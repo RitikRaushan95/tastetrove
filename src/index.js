@@ -8,12 +8,16 @@ import Classcompo from './Components/Classcompo';
 import Error from './Components/Error';
 import Navbar from './Components/Navbar'
 import Shimer from './Components/Shimer';
+import Footer from './Components/Footer';
+import Contact from './Components/Contact';
+import About from './Components/About';
 
 const TasteTrove=()=>{
     return(
         <>
         <Navbar/>
         <Outlet/>
+        <Footer/>
         </>
     )
 }
@@ -34,12 +38,16 @@ const myRoute=createBrowserRouter([
                 element:<Search/>
             },
             {
-                path:"/class",
-                element:<Classcompo/>
-            },
-            {
                 path:"/shimer",
                 element:<Shimer/>
+            },
+            {
+                path:"/contact",
+                element:<Contact/>
+            },
+            {
+                path:"/about",
+                element:<About/>
             }
         ],
         errorElement:<Error/>
