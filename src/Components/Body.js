@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Topratedcard from './Topratedcard';
+import Restaurants from './Restaurants';
 import Allimage from '../assets/Imagecollection'
 
 
@@ -8,7 +8,7 @@ function Body() {
     const [restCrad, setRestCard]=useState([]);
    
     let resStore=restCrad.map((el)=>{
-        return <Topratedcard key={el.id} restInfo={el.info}/>
+        return <Restaurants key={el.id} restInfo={el.info}/>
     })
     
     const dataCollect= async ()=>{
