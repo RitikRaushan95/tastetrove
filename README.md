@@ -12,3 +12,5 @@ Taste Trove is a clone of Swiggy application that helps users discover available
  HTML, CSS, JavaScript (React.js),Tailwind
 
 Try it at https://tastetrove.vercel.app/
+
+🚫 To visit this page the search engine must be CORS enabled
